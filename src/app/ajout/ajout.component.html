@@ -1,0 +1,37 @@
+<div class="col-xs-12 offset-xl-2 col-xl-5">
+        <h2>Ajouter un appareil :</h2>
+        <div 
+          role="alert"
+          class="alert alert-info"
+        > Ajouter un appareil et spécifier son état de départ </div>
+        <form (ngSubmit)="onAjouterAppareil(d)" #d="ngForm">
+          <div class="row">
+              <div class="col-6">
+                  <input name="name" class="form-control" placeholder="Name" ngModel>
+              </div>
+              <div class="col-2 custom-control custom-radio">
+                <input 
+                  type="radio" 
+                  class="custom-control-input" 
+                  id="isOn" 
+                  name="status" 
+                  value="isOn" ngModel>
+                <label class="custom-control-label" for="isOn">isOn</label>
+              </div>
+              <div class="col-2 custom-control custom-radio">
+                <input 
+                  type="radio" 
+                  class="custom-control-input" 
+                  id="isOff" 
+                  name="status" 
+                  value="isOff" ngModel>
+                <label class="custom-control-label" for="isOff">isOff</label>
+              </div>
+              <div class="col-2">
+                  <button type="submit" class="btn btn-success">
+                      <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+            </div> 
+          </form>
+      </div>

@@ -1,0 +1,52 @@
+
+<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-xl-5">
+
+				<h2>Les Appareils</h2>
+        <ul class="list-group"  *ngFor = "let appareil of tabAppareil; let i =index">
+          <!-- <app-appareil
+           
+            [appareil] = "appareil" [index] = "i"
+          > </app-appareil> -->
+          <!-- afficher ici acev une boucle  -->
+          <div 
+            role="alert"
+            class="alert"
+            [ngClass] = "{'alert-success':appareil.status,
+                          'alert-danger':appareil.status ==false }"
+            >
+            <h4> {{ i }}  -- {{appareil.name}} -- {{appareil.status}}</h4>
+            <button *ngIf="!appareil.status"
+                class="btn btn-success"
+                (click) = "onSwitchOneOn(i)"
+            > ON</button>
+            <button  *ngIf="appareil.status"
+                class="ml-2 btn btn-danger"
+                (click) = "onSwitchOneOff(i)"
+            > OFF</button> 
+            <button  
+                class="ml-2 btn btn-info"
+                (click) = "onSeeMoreInfo(i)"
+            > Détail</button> 
+          </div>
+        </ul>
+        <br><br>
+        <!-- -->
+        <button 
+          class="btn btn-success"
+          (click) = "onSwitchAllOn()"
+          >ALL ON</button>
+          
+        <button  
+          class="ml-2 btn btn-danger"
+          (click) = "onSwitchAllOff()"
+          
+        >ALL OFF</button>
+      </div>
+      
+
+    </div>
+</div>
+
+
