@@ -9,6 +9,7 @@ import { AppareilService } from './services/appareil.service';
 import { AjoutComponent } from './ajout/ajout.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { DetailsApplicationComponent } from './details-application/details-application.component';
 
 // je declare le tableau objet routes
 let routes:any[]=
@@ -17,6 +18,7 @@ let routes:any[]=
   {path:'appareil', component : HomeComponent},
   {path:'appareil/view/:id', component : AppareilComponent},
   {path:'ajout', component:AjoutComponent},
+  {path:'details', component:DetailsApplicationComponent},
   {path:'**', component:HomeComponent},
 ];
 
@@ -26,7 +28,8 @@ let routes:any[]=
     AppComponent,
     AppareilComponent,
     AjoutComponent,
-    HomeComponent
+    HomeComponent,
+    DetailsApplicationComponent
   ],
   imports: [
     HttpClientModule,

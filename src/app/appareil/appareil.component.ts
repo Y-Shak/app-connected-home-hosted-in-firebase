@@ -9,6 +9,9 @@ import { AppareilService } from '../services/appareil.service';
   templateUrl: './appareil.component.html',
   styleUrls: ['./appareil.component.scss']
 })
+
+// ici je peux mettre @Input pour recuperer l'index simplement depuis homeComponent
+
 export class AppareilComponent implements OnInit {
   appareils :Appareil[];
   appareil : Appareil;
@@ -36,21 +39,14 @@ export class AppareilComponent implements OnInit {
     
     
   }
-  
-  // this.appareil = this.getInformation(this.index);
 
-  // getInformation(i : number){
 
-  // }
-  
-  // onSwitchOneOn(index){
-  //   this.appareilService.switchOneOn(index);
-  // }
-  // onSwitchOneOff(index){
-  //   this.appareilService.switchOneOff(index);
+  onSwitchOneOn(index){
+    this.appareilService.switchOneOn(this.index);
+  }
+  onSwitchOneOff(index){
+    this.appareilService.switchOneOff(this.index);
 
-  // }
-
-  
+  }
 
 }

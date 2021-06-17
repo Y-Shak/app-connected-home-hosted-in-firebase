@@ -16,7 +16,7 @@
             [ngClass] = "{'alert-success':appareil.status,
                           'alert-danger':appareil.status ==false }"
             >
-            <h4> {{ i }}  -- {{appareil.name}} -- {{appareil.status}}</h4>
+            <h4> {{appareil.name}}  </h4>
             <button *ngIf="!appareil.status"
                 class="btn btn-success"
                 (click) = "onSwitchOneOn(i)"

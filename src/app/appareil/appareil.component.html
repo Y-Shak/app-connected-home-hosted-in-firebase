@@ -1,22 +1,17 @@
-<!-- la partie div l'ancienne qui affiche une seule div -->
-<!-- [ngClass] = "{'alert-success':appareil.status,
-              'alert-danger':appareil.status ==false }" -->
-<!--
 <div 
             role="alert"
             class="alert"
+            [ngClass] = "{'alert-success':appareil.status,
+                          'alert-danger':appareil.status ==false }"
             >
-            <h4> {{appareil.name}} -- {{appareil.status}}</h4>
+            <h4> {{appareil.name}}  </h4>
             <button *ngIf="!appareil.status"
                 class="btn btn-success"
-                (click) = "onSwitchOneOn(index)"
+                (click) = "onSwitchOneOn(i)"
             > ON</button>
             <button  *ngIf="appareil.status"
                 class="ml-2 btn btn-danger"
                 (click) = "onSwitchOneOff(index)"
             > OFF</button> 
-             
+            
           </div>
-        -->
-        {{ appareil | json}}
-        <h2>-- {{index}} -- {{appareil?.name }} -- {{appareil?.status }}</h2>
